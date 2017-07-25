@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mushroom Mania</title>
+</head>
+<body ng-app="mushroomMania">
+	<h1>this is mushroom mania</h1>
+	<div ng-controller="MushroomController">
+		<h2>These are the mushrooms!</h2>
+		<ul>
+			<li ng-repeat="mushrooms in mushroomList"></li>
+		</ul>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
