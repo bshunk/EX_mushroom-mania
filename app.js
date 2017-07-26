@@ -20,6 +20,15 @@ myApp.factory("MushroomFactory", function($q, $http) {
 myApp.controller("MushroomController", function($scope, MushroomFactory) {
 	MushroomFactory.getMushrooms()
 	.then( (mushroomData) => {
+		console.log(mushroomData);
 		$scope.mushroomList = mushroomData.data.mushrooms;
+		console.log($scope.mushroomList = mushroomData.data.mushrooms);
 	});
 });
+
+// myApp.controller("SongController", function($scope, SongFactory) {
+// 	SongFactory.getSongs()
+// 	.then( (songsData) => {
+// 		$scope.songList = songsData.data.songs;
+// 	});
+// });

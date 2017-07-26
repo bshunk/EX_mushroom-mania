@@ -8,7 +8,9 @@
 	<div ng-controller="MushroomController">
 		<h2>These are the mushrooms!</h2>
 		<ul>
-			<li ng-repeat="mushrooms in mushroomList"></li>
+			<li ng-repeat="mushrooms in mushroomList">
+				{{mushrooms.name}}:<br>{{mushrooms.description}}}<br>It is {{mushrooms.edible}} that they are edible!
+			</li>
 		</ul>
 	</div>
 
