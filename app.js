@@ -25,10 +25,3 @@ myApp.controller("MushroomController", function($scope, MushroomFactory) {
 		console.log($scope.mushroomList = mushroomData.data.mushrooms);
 	});
 });
-
-// myApp.controller("SongController", function($scope, SongFactory) {
-// 	SongFactory.getSongs()
-// 	.then( (songsData) => {
-// 		$scope.songList = songsData.data.songs;
-// 	});
-// });
