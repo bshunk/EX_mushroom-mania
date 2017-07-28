@@ -1,0 +1,33 @@
+<div ng-controller="MushroomController">
+  <h2>These are the mushrooms!</h2>
+  <label>
+    <input type="radio" ng-model="mushrooms.edible" name="edible" value="true"> Non-Poisonous
+    <ul>
+    <li ng-repeat="mushrooms in mushroomList">
+      {{mushrooms.name}}:<br>{{mushrooms.description}}}<br>It is {{mushrooms.edible.true}} that they are edible!
+    </li>
+  </ul>
+  </label>
+  <label>
+    <input type="radio" ng-model="mushrooms.edible" name="edible" value="false"> Poisonous
+    <ul>
+    <li ng-repeat="mushrooms in mushroomList">
+      {{mushrooms.name}}:<br>{{mushrooms.description}}}<br>It is {{mushrooms.edible.false}} that they are edible!
+    </li>
+  </ul>
+  </label>
+ <!--  <ul>
+    <li ng-repeat="mushrooms in mushroomList">
+      {{mushrooms.name}}:<br>{{mushrooms.description}}}<br>It is {{mushrooms.edible.true}} that they are edible!
+    </li>
+  </ul> -->
+</div>
+
+<!--<label>
+  <input type="radio" ng-model="color.name" value="red">
+  Red
+</label><br/>
+<label>
+  <input type="radio" ng-model="color.name" ng-value="specialValue">
+  Green
+</label><br/> -->
