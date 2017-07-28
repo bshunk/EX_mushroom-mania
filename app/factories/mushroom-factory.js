@@ -14,3 +14,4 @@ mushApp.factory("MushroomFactory", function($q, $http, FirebaseUrl, FBCreds) {
   };
   return {getMushrooms};
 });
+
