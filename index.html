@@ -3,19 +3,15 @@
 <head>
 	<title>Mushroom Mania</title>
 </head>
-<body ng-app="mushroomMania">
+<body ng-app="MushroomMania">
 	<h1>this is mushroom mania</h1>
-	<div ng-controller="MushroomController">
-		<h2>These are the mushrooms!</h2>
-		<ul>
-			<li ng-repeat="mushrooms in mushroomList">
-				{{mushrooms.name}}:<br>{{mushrooms.description}}}<br>It is {{mushrooms.edible}} that they are edible!
-			</li>
-		</ul>
-	</div>
+
+	<div ng-include="'partials/mushroom-list.html'"></div>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-	<script src="app.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/controllers/mushroom-controller.js"></script>
+	<script src="app/factories/mushroom-factory.js"></script>
 </body>
 </html>
