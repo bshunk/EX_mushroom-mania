@@ -5,12 +5,19 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body ng-app="MushroomMania">
-	<h1>this is mushroom mania</h1>
+
+	<h1>Welcome, to the Mania of Shrooms!</h1>
 
 	<div ng-include="'partials/mushroom-list.html'"></div>
 
-
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<!-- dependencies -->
+	<script type="text/javascript" src="/lib/node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
+  <script type="text/javascript" src="lib/node_modules/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="lib/node_modules/firebase/firebase.js"></script> 
+	
+  <!-- js files -->
 	<script src="app/app.js"></script>
 	<script src="app/controllers/mushroom-controller.js"></script>
 	<script src="app/factories/mushroom-factory.js"></script>
