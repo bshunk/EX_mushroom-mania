@@ -1,27 +1,47 @@
 <div ng-controller="MushroomController">
   <h2>These are the mushrooms!</h2>
-  <label>
-    <input type="radio" ng-click="showEdible" ng-model="mushroomEdible" value="true"> Non-Poisonous
-
-    <input type="radio" ng-click="showNotEdible" ng-model="mushroomEdible" value="false"> Poisonous
-
-    <ul ng-show="isEdible">
-      <li ng-repeat="mushrooms in mushroomList | filter:search:mushrooms" >
-      {{mushrooms.name}}:<br>{{mushrooms.description}}}<br>It is {{mushrooms.edible}} 
-      </li>
-    </ul>
-  </label>
-  <label>
-    <ul ng-show="notEdible">
-    <li ng-repeat="mushrooms in mushroomList | filter:search:mushrooms">
-      {{mushrooms.name}}:<br>{{mushrooms.description}}}<br>It is {{mushrooms.edible}} that they are edible!
-    </li>
-  </ul>
-  </label>
+  <form>
+    Pick a type of mushroom:
+    <input type="radio" ng-model="mushroomEdible" value="nonPoisonous"> Non-Poisonous
+    <input type="radio" ng-model="mushroomEdible" value="poisonous"> Poisonous
+  </form>
+  <div ng-switch="selectedMushroom">
+    <div ng-switch-when="nonPoisonous">
+      <h1>{{mushrooms.name}}</h1>
+      <p>{{mushrooms.description}}</p>
+      <p>It is {{mushrooms.edible}} that it is edible!</p>
+    </div>
+    <div ng-switch-when="poisonous">
+      <h1>{{mushrooms.name}}</h1>
+      <p>{{mushrooms.description}}</p>
+      <p>It is {{mushrooms.edible}} that it is edible!</p>
+    </div>
+  </div>
 </div>
 
+<!-- <form>
+  Pick a topic:
+  <input type="radio" ng-model="myVar" value="dogs">Dogs
+  <input type="radio" ng-model="myVar" value="tuts">Tutorials
+  <input type="radio" ng-model="myVar" value="cars">Cars
+</form>
+<div ng-switch="myVar">
+  <div ng-switch-when="dogs">
+     <h1>Dogs</h1>
+     <p>Welcome to a world of dogs.</p>
+  </div>
+  <div ng-switch-when="tuts">
+     <h1>Tutorials</h1>
+     <p>Learn from examples.</p>
+  </div>
+  <div ng-switch-when="cars">
+     <h1>Cars</h1>
+     <p>Read about cars.</p>
+  </div>
+</div> -->
 
-<!-- <div ng-controller="MushroomController">
+<!-- 
+<div ng-controller="MushroomController">
   <h2>These are the mushrooms!</h2>
    <input type="radio" value="Poisonous" name="Poisonous" ng-click=""> Poisonous
    <input type="radio" value="Non-Poisonous" ng-click="">Non-Poisonous 
@@ -30,7 +50,4 @@
       {{mushrooms.name}}:<br>{{mushrooms.description}}}<br>It is {{mushrooms.edible}} that they are edible!
     </li>
   </ul>
-</div> -->
-
-
-
+</div>-->
