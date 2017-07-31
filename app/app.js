@@ -1,7 +1,6 @@
 'use strict';
 
-const myApp = angular.module("MushroomMania", []);
-
-
+let mushApp = angular.module("MushroomMania", [])
+.constant("FirebaseUrl", "https://mushroommania-33d32.firebaseio.com/");
 
 

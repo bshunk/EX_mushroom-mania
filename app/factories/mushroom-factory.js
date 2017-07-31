@@ -1,6 +1,6 @@
 'use strict';
 
-myApp.factory("MushroomFactory", function($q, $http) {
+mushApp.factory("MushroomFactory", function($q, $http, FirebaseUrl, FBCreds) {
   let getMushrooms = () => {
     return $q( (resolve, reject) => {
       $http.get("./lib/mushrooms.json")
@@ -14,3 +14,4 @@ myApp.factory("MushroomFactory", function($q, $http) {
   };
   return {getMushrooms};
 });
+

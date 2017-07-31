@@ -1,6 +1,6 @@
 'use strict';
 
-myApp.controller("MushroomController", function($scope, MushroomFactory) {
+mushApp.controller("MushroomController", function($scope, MushroomFactory) {
   
   MushroomFactory.getMushrooms()
   .then( (mushroomData) => {
@@ -13,7 +13,7 @@ myApp.controller("MushroomController", function($scope, MushroomFactory) {
     $scope.isEdible = true;
     $scope.notEdible = false;
     console.log("edible?", $scope.isEdible);
-  }
+  };
 
   // defining $scope.showNotEdible to equal the result of the function
   $scope.showNotEdible = () => {
@@ -21,6 +21,6 @@ myApp.controller("MushroomController", function($scope, MushroomFactory) {
     $scope.notEdible = true;
     console.log("not edible?", $scope.notEdible);
 
-  }
+  };
 
 });
